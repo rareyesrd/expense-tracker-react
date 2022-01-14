@@ -19,7 +19,7 @@ const NewExpensesForm = (props) => {
 
   const toggleForm = () => {
     setEnteredTitle("");
-    setEnteredAmount("");
+    setEnteredAmount(0);
     setEnteredDate("");
     setShowForm(!showForm);
   };
@@ -33,7 +33,7 @@ const NewExpensesForm = (props) => {
 
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
 
